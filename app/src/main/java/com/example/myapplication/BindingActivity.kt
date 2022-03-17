@@ -13,12 +13,29 @@ class BindingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        binding.btnNavDrawer.setOnClickListener {
+            val intent = Intent(this, NavDrawerActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnNavBar.setOnClickListener {
+            val intent = Intent(this, BottomNavActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnViewPager.setOnClickListener {
+            val intent = Intent(this, ViewPagerActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.button3.setOnClickListener {
-            val npm = binding.etNpm.text.toString().toInt()
-            val ipk = binding.etIpk.text.toString().toDouble()
-            val nama = binding.etNama.text.toString()
-            val intent = Intent(this, IntentActivity::class.java)
+
+
+
+//            val npm = binding.etNpm.text.toString().toInt()
+//            val ipk = binding.etIpk.text.toString().toDouble()
+//            val nama = binding.etNama.text.toString()
+//            val intent = Intent(this, IntentActivity::class.java)
 
 //            val bundle = Bundle()
 //
@@ -35,11 +52,11 @@ class BindingActivity : AppCompatActivity() {
 //                putExtras(bundle)
 //            }
 
-            val mahasiswa = Mahasiswa(npm,nama,ipk)
-
-            intent.putExtra("dataMahasiswa",mahasiswa)
-
-            startActivity(intent)
+//            val mahasiswa = Mahasiswa(npm,nama,ipk)
+//
+//            intent.putExtra("dataMahasiswa",mahasiswa)
+//
+//            startActivity(intent)
         }
 
 

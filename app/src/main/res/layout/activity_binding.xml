@@ -52,4 +52,31 @@
         app:layout_constraintStart_toStartOf="@+id/etIpk"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Pager"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/btn_nav_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bootom Navbar"
+        app:layout_constraintEnd_toEndOf="@+id/btn_view_pager"
+        app:layout_constraintStart_toStartOf="@+id/btn_view_pager"
+        app:layout_constraintTop_toBottomOf="@+id/btn_view_pager" />
+
+    <Button
+        android:id="@+id/btn_nav_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nav drawer"
+        app:layout_constraintEnd_toEndOf="@+id/btn_nav_bar"
+        app:layout_constraintStart_toStartOf="@+id/btn_nav_bar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nav_bar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
