@@ -21,6 +21,7 @@ class BottomNavActivity : AppCompatActivity() {
         binding = ActivityBottomNavBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val navView: BottomNavigationView = binding.navView
 
         navView.setOnItemSelectedListener {
