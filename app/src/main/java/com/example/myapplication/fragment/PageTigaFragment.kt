@@ -5,30 +5,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.myapplication.R
-import com.example.myapplication.databinding.FragmentPageSatuBinding
+import com.example.myapplication.databinding.FragmentPageTigaBinding
 
-class PageSatuFragment : Fragment() {
+class PageTigaFragment : Fragment() {
 
-    private lateinit var binding: FragmentPageSatuBinding
+    lateinit var binding: FragmentPageTigaBinding
+    val args: PageTigaFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentPageSatuBinding.inflate(inflater,container, false)
+        binding = FragmentPageTigaBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnToFragmentDua.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putString("fragment1", "Binarian")
-            it.findNavController().navigate(R.id.action_pageSatuFragment_to_pageDuaFragment, bundle)
-        }
+        val nama = args.nama
+        binding.tvNama.text = nama
 
     }
 

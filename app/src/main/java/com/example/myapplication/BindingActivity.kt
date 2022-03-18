@@ -13,6 +13,11 @@ class BindingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        binding.btnNavComp.setOnClickListener {
+            val intent = Intent(this, NavComponentActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnNavDrawer.setOnClickListener {
             val intent = Intent(this, NavDrawerActivity::class.java)
             startActivity(intent)

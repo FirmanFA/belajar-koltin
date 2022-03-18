@@ -28,13 +28,13 @@ class BottomNavActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.satu -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, PageSatuFragment())
+                        .replace(binding.fragmentContainerView.id, PageSatuFragment())
                         .commit()
                     true
                 }
                 R.id.dua ->{
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, PageDuaFragment())
+                        .replace(binding.fragmentContainerView.id, PageDuaFragment())
                         .commit()
                     true
                 }

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".NavComponentActivity"
+            android:exported="false" />
+        <activity
             android:name=".NavDrawerActivity"
             android:exported="false"
             android:label="@string/title_activity_nav_drawer"

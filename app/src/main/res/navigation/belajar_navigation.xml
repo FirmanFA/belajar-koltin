@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/belajar_navigation"
+    app:startDestination="@id/pageSatuFragment">
+
+    <fragment
+        android:id="@+id/pageSatuFragment"
+        android:name="com.example.myapplication.fragment.PageSatuFragment"
+        android:label="fragment_page_satu"
+        tools:layout="@layout/fragment_page_satu" >
+        <action
+            android:id="@+id/action_pageSatuFragment_to_pageDuaFragment"
+            app:destination="@id/pageDuaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageDuaFragment"
+        android:name="com.example.myapplication.fragment.PageDuaFragment"
+        android:label="fragment_page_dua"
+        tools:layout="@layout/fragment_page_dua" >
+        <action
+            android:id="@+id/action_pageDuaFragment_to_pageTigaFragment"
+            app:destination="@id/pageTigaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageTigaFragment"
+        android:name="com.example.myapplication.fragment.PageTigaFragment"
+        android:label="fragment_page_tiga"
+        tools:layout="@layout/fragment_page_tiga" >
+        <argument
+            android:name="nama"
+            app:argType="string" />
+    </fragment>
+</navigation>
