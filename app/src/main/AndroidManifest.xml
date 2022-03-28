@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".MultiNavActivity"
+            android:exported="false" />
+        <activity
             android:name=".NavComponentActivity"
             android:exported="false" />
         <activity

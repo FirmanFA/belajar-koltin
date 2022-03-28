@@ -31,5 +31,9 @@
         <argument
             android:name="nama"
             app:argType="string" />
+        <action
+            android:id="@+id/action_pageTigaFragment_to_kedua_navigation"
+            app:destination="@id/kedua_navigation" />
     </fragment>
+    <include app:graph="@navigation/kedua_naviagtion" />
 </navigation>

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NavComponentActivity">
+    android:fitsSystemWindows="true">
 
-    <androidx.fragment.app.FragmentContainerView
+    <fragment
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/belajar_navigation"
-        android:id="@+id/nav_host" />
+        app:navGraph="@navigation/ketiga_navigation"
+        android:id="@+id/nav_host_dua" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
