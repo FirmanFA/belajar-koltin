@@ -1,9 +1,15 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.myapplication.databinding.ActivityBindingBinding
+import com.example.myapplication.databinding.DialogBelajarLayoutBinding
+import com.example.myapplication.fragment.CustomDialogFragment
 
 class BindingActivity : AppCompatActivity() {
     lateinit var binding: ActivityBindingBinding
@@ -12,6 +18,27 @@ class BindingActivity : AppCompatActivity() {
         binding = ActivityBindingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        binding.btnDialog.setOnClickListener {
+
+            //create dialog without fragment
+
+//            val dialogBinding = DialogBelajarLayoutBinding.inflate(layoutInflater)
+//            val dialogBuilder = AlertDialog.Builder(this)
+//            dialogBuilder.setView(dialogBinding.root)
+//            val dialog = dialogBuilder.create()
+//
+//            dialogBinding.btnDialog.setOnClickListener {
+//                Toast.makeText(this, "ini dialog", Toast.LENGTH_SHORT).show()
+//                dialog.dismiss()
+//            }
+//            dialog.show()
+
+            //create dialog via fragment
+            val dialogFragment = CustomDialogFragment("firman")
+            dialogFragment.show(supportFragmentManager,"dialog")
+
+        }
 
         binding.btnNavComp.setOnClickListener {
             val intent = Intent(this, NavComponentActivity::class.java)

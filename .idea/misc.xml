@@ -5,6 +5,7 @@
       <map>
         <entry key="../../Library/Android/sdk/platforms/android-32/data/res/drawable/sym_def_app_icon.xml" value="0.107" />
         <entry key="app/src/main/res/drawable/button_border.xml" value="0.108" />
+        <entry key="app/src/main/res/drawable/dialog_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/edit_text_background.xml" value="0.107" />
         <entry key="app/src/main/res/layout/activity_binding.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/layout/activity_bottom_nav.xml" value="0.18020833333333333" />
@@ -16,6 +17,8 @@
         <entry key="app/src/main/res/layout/activity_view_pager.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/layout/app_bar_nav_drawer.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/layout/content_nav_drawer.xml" value="0.18020833333333333" />
+        <entry key="app/src/main/res/layout/dialog_belajar_layout.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/layout/fragment_custom_dialog.xml" value="0.16927083333333334" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/layout/fragment_page_dua.xml" value="0.19427083333333334" />
