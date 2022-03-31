@@ -18,6 +18,8 @@ class BindingActivity : AppCompatActivity() {
         binding = ActivityBindingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //test coomit
+
 
         binding.btnDialog.setOnClickListener {
 
