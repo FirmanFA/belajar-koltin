@@ -20,6 +20,11 @@ class BindingActivity : AppCompatActivity() {
 
         //test coomit
 
+        binding.btnPreference.setOnClickListener{
+            val intent = Intent(this, PreferenceActivity::class.java)
+            startActivity(intent)
+        }
+
 
         binding.btnDialog.setOnClickListener {
 
