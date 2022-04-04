@@ -18,7 +18,11 @@ class BindingActivity : AppCompatActivity() {
         binding = ActivityBindingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //test coomit
+
+        binding.btnRoom.setOnClickListener {
+            val intent = Intent(this, RoomActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.btnPreference.setOnClickListener{
             val intent = Intent(this, PreferenceActivity::class.java)
