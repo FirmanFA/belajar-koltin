@@ -5,11 +5,15 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.JsonWriter
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.myapplication.databinding.ActivityBindingBinding
 import com.example.myapplication.databinding.DialogBelajarLayoutBinding
 import com.example.myapplication.fragment.CustomDialogFragment
+import org.json.JSONArray
+import org.json.JSONObject
 
 class BindingActivity : AppCompatActivity() {
     lateinit var binding: ActivityBindingBinding
@@ -17,6 +21,61 @@ class BindingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityBindingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        binding.btnDatastore.setOnClickListener {
+            val intent = Intent(this, DatastoreActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+        val jsonobj = JSONObject().apply {
+            put("id",1)
+            put("nama", "firman")
+
+            val tiket = JSONObject().apply {
+                put("kelas", "ekonomii")
+                put("domestik", true)
+            }
+
+            put("tiket", tiket)
+            put("bagasi", JSONObject.NULL)
+
+            val isiTas = JSONArray().apply {
+                val baju = JSONObject().apply {
+                    put("nama_barang", "baju")
+                    put("qty", 10)
+                }
+
+                put(baju)
+
+                val celana = JSONObject().apply {
+                    put("nama_barang", "celana")
+                    put("qty", 10)
+                }
+
+                put(celana)
+
+                val buku = JSONObject().apply {
+                    put("nama_barang", "buku")
+                    put("qty", 10)
+                }
+
+                put(buku)
+
+                val parfum = JSONObject().apply {
+                    put("nama_barang", "parfum")
+                    put("qty", 10)
+                }
+
+                put(parfum)
+            }
+            put("isi_tas", isiTas)
+        }
+        Log.i("jsonobject", jsonobj.toString(2))
+
+
 
 
         binding.btnRoom.setOnClickListener {
