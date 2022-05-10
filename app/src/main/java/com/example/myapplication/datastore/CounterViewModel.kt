@@ -1,5 +1,6 @@
 package com.example.myapplication.datastore
 
+import android.provider.ContactsContract
 import androidx.lifecycle.*
 import kotlinx.coroutines.launch
 
@@ -17,7 +18,14 @@ class CounterViewModel(private val pref: CounterDatastoreManager): ViewModel() {
         }
     }
 
+    fun setEmail(email: String){
+        viewModelScope.launch {
+            pref.setEmail(email)
+        }
+    }
+
     val getDataStore = pref.getCounter.asLiveData()
+    val getEmail = pref.getEmail.asLiveData()
 
 }
 

@@ -33,6 +33,14 @@ class DatastoreActivity : AppCompatActivity() {
             counterViewModel.increment()
         }
 
+        counterViewModel.getEmail.observe(this){
+            binding.textView5.text = it
+        }
+
+        binding.button5.setOnClickListener {
+            counterViewModel.setEmail(binding.editTextTextPersonName3.text.toString())
+        }
+
     }
 
 
