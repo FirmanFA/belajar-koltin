@@ -18,6 +18,8 @@ class CounterDatastoreManager(private val context: Context) {
             preferences[counter] ?: 0
         }
 
+
+
     fun getCounter(): Flow<Int>{
         return context.dataStore.data.map {
             it[counter] ?: 0

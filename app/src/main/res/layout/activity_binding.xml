@@ -1,133 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BindingActivity">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNama" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNama" />
 
-    <EditText
-        android:id="@+id/etNama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="nama"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="nama"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etIpk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="ipk"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/etNama"
-        app:layout_constraintEnd_toEndOf="@+id/etNama"
-        app:layout_constraintStart_toStartOf="@+id/etNama"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        <EditText
+            android:id="@+id/etIpk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="ipk"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/etNama"
+            app:layout_constraintEnd_toEndOf="@+id/etNama"
+            app:layout_constraintStart_toStartOf="@+id/etNama"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <EditText
-        android:id="@+id/etNpm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="npm"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/etIpk"
-        app:layout_constraintEnd_toEndOf="@+id/etIpk"
-        app:layout_constraintStart_toStartOf="@+id/etIpk"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        <EditText
+            android:id="@+id/etNpm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="npm"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/etIpk"
+            app:layout_constraintEnd_toEndOf="@+id/etIpk"
+            app:layout_constraintStart_toStartOf="@+id/etIpk"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/btn_view_pager"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View Pager"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        <Button
+            android:id="@+id/btn_view_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Pager"
+            app:layout_constraintEnd_toEndOf="@+id/button3"
+            app:layout_constraintStart_toStartOf="@+id/button3"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
 
-    <Button
-        android:id="@+id/btn_nav_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bootom Navbar"
-        app:layout_constraintEnd_toEndOf="@+id/btn_view_pager"
-        app:layout_constraintStart_toStartOf="@+id/btn_view_pager"
-        app:layout_constraintTop_toBottomOf="@+id/btn_view_pager" />
+        <Button
+            android:id="@+id/btn_nav_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bootom Navbar"
+            app:layout_constraintEnd_toEndOf="@+id/btn_view_pager"
+            app:layout_constraintStart_toStartOf="@+id/btn_view_pager"
+            app:layout_constraintTop_toBottomOf="@+id/btn_view_pager" />
 
-    <Button
-        android:id="@+id/btn_nav_drawer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="nav drawer"
-        app:layout_constraintEnd_toEndOf="@+id/btn_nav_bar"
-        app:layout_constraintStart_toStartOf="@+id/btn_nav_bar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_nav_bar" />
+        <Button
+            android:id="@+id/btn_nav_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nav drawer"
+            app:layout_constraintEnd_toEndOf="@+id/btn_nav_bar"
+            app:layout_constraintStart_toStartOf="@+id/btn_nav_bar"
+            app:layout_constraintTop_toBottomOf="@+id/btn_nav_bar" />
 
-    <Button
-        android:id="@+id/btn_nav_comp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Nav component"
-        app:layout_constraintEnd_toEndOf="@+id/btn_nav_drawer"
-        app:layout_constraintStart_toStartOf="@+id/btn_nav_drawer"
-        app:layout_constraintTop_toBottomOf="@+id/btn_nav_drawer" />
+        <Button
+            android:id="@+id/btn_nav_comp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Nav component"
+            app:layout_constraintEnd_toEndOf="@+id/btn_nav_drawer"
+            app:layout_constraintStart_toStartOf="@+id/btn_nav_drawer"
+            app:layout_constraintTop_toBottomOf="@+id/btn_nav_drawer" />
 
-    <Button
-        android:id="@+id/btn_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="show dialog"
-        app:layout_constraintBottom_toTopOf="@+id/etNpm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btn_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="image"
+            app:layout_constraintEnd_toEndOf="@+id/btn_nav_drawer"
+            app:layout_constraintStart_toStartOf="@+id/btn_nav_drawer"
+            app:layout_constraintTop_toBottomOf="@+id/btn_nav_comp" />
 
-    <Button
-        android:id="@+id/btn_preference"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="shared preference"
-        app:layout_constraintBottom_toTopOf="@+id/btn_dialog"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btn_di"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="injection"
+            app:layout_constraintEnd_toEndOf="@+id/btn_image"
+            app:layout_constraintStart_toStartOf="@+id/btn_image"
+            app:layout_constraintTop_toBottomOf="@+id/btn_image" />
 
-    <Button
-        android:id="@+id/btn_room"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="room"
-        app:layout_constraintBottom_toTopOf="@+id/btn_preference"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btn_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show dialog"
+            app:layout_constraintBottom_toTopOf="@+id/etNpm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btn_datastore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="datastore"
-        app:layout_constraintBottom_toTopOf="@+id/btn_room"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_preference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="shared preference"
+            app:layout_constraintBottom_toTopOf="@+id/btn_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="room"
+            app:layout_constraintBottom_toTopOf="@+id/btn_preference"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_datastore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="datastore"
+            app:layout_constraintBottom_toTopOf="@+id/btn_room"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

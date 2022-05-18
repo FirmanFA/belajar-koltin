@@ -1,19 +1,21 @@
 package com.example.myapplication
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.JsonWriter
 import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.example.myapplication.databinding.ActivityBindingBinding
-import com.example.myapplication.databinding.DialogBelajarLayoutBinding
+import com.example.myapplication.di.NetworkModule
+import com.example.myapplication.di.RepositoryModule
+import com.example.myapplication.di.ViewModelModule
 import com.example.myapplication.fragment.CustomDialogFragment
+import com.example.myapplication.ui.injection.InjectionActivity
 import org.json.JSONArray
 import org.json.JSONObject
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
 
 class BindingActivity : AppCompatActivity() {
     lateinit var binding: ActivityBindingBinding
@@ -23,75 +25,86 @@ class BindingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.btnDatastore.setOnClickListener {
-            val intent = Intent(this, DatastoreActivity::class.java)
-            startActivity(intent)
-        }
-
-
-
-        val jsonobj = JSONObject().apply {
-            put("id",1)
-            put("nama", "firman")
-
-            val tiket = JSONObject().apply {
-                put("kelas", "ekonomii")
-                put("domestik", true)
+        if (BuildConfig.FLAVOR == "full"){
+            binding.btnDi.setOnClickListener {
+                val intent = Intent(this, InjectionActivity::class.java)
+                startActivity(intent)
             }
 
-            put("tiket", tiket)
-            put("bagasi", JSONObject.NULL)
-
-            val isiTas = JSONArray().apply {
-                val baju = JSONObject().apply {
-                    put("nama_barang", "baju")
-                    put("qty", 10)
-                }
-
-                put(baju)
-
-                val celana = JSONObject().apply {
-                    put("nama_barang", "celana")
-                    put("qty", 10)
-                }
-
-                put(celana)
-
-                val buku = JSONObject().apply {
-                    put("nama_barang", "buku")
-                    put("qty", 10)
-                }
-
-                put(buku)
-
-                val parfum = JSONObject().apply {
-                    put("nama_barang", "parfum")
-                    put("qty", 10)
-                }
-
-                put(parfum)
+            binding.btnImage.setOnClickListener {
+                val intent = Intent(this, ImageActivity::class.java)
+                startActivity(intent)
             }
-            put("isi_tas", isiTas)
-        }
-        Log.i("jsonobject", jsonobj.toString(2))
+
+            binding.btnDatastore.setOnClickListener {
+                val intent = Intent(this, DatastoreActivity::class.java)
+                startActivity(intent)
+            }
+
+
+
+            val jsonobj = JSONObject().apply {
+                put("id",1)
+                put("nama", "firman")
+
+                val tiket = JSONObject().apply {
+                    put("kelas", "ekonomii")
+                    put("domestik", true)
+                }
+
+                put("tiket", tiket)
+                put("bagasi", JSONObject.NULL)
+
+                val isiTas = JSONArray().apply {
+                    val baju = JSONObject().apply {
+                        put("nama_barang", "baju")
+                        put("qty", 10)
+                    }
+
+                    put(baju)
+
+                    val celana = JSONObject().apply {
+                        put("nama_barang", "celana")
+                        put("qty", 10)
+                    }
+
+                    put(celana)
+
+                    val buku = JSONObject().apply {
+                        put("nama_barang", "buku")
+                        put("qty", 10)
+                    }
+
+                    put(buku)
+
+                    val parfum = JSONObject().apply {
+                        put("nama_barang", "parfum")
+                        put("qty", 10)
+                    }
+
+                    put(parfum)
+                }
+                put("isi_tas", isiTas)
+            }
+            Log.i("jsonobject", jsonobj.toString(2))
 
 
 
 
-        binding.btnRoom.setOnClickListener {
-            val intent = Intent(this, RoomActivity::class.java)
-            startActivity(intent)
-        }
+            binding.btnRoom.setOnClickListener {
+                val intent = Intent(this, RoomActivity::class.java)
+                startActivity(intent)
+            }
 
-        binding.btnPreference.setOnClickListener{
-            val intent = Intent(this, PreferenceActivity::class.java)
-            startActivity(intent)
-        }
+            binding.btnPreference.setOnClickListener{
+                val intent = Intent(this, PreferenceActivity::class.java)
+                startActivity(intent)
+            }
 
 
-        binding.btnDialog.setOnClickListener {
+            binding.btnDialog.setOnClickListener {
 
-            //create dialog without fragment
+                //create dialog without fragment
 
 //            val dialogBinding = DialogBelajarLayoutBinding.inflate(layoutInflater)
 //            val dialogBuilder = AlertDialog.Builder(this)
@@ -104,33 +117,33 @@ class BindingActivity : AppCompatActivity() {
 //            }
 //            dialog.show()
 
-            //create dialog via fragment
-            val dialogFragment = CustomDialogFragment("firman")
-            dialogFragment.show(supportFragmentManager,"dialog")
+                //create dialog via fragment
+                val dialogFragment = CustomDialogFragment("firman")
+                dialogFragment.show(supportFragmentManager,"dialog")
 
-        }
+            }
 
-        binding.btnNavComp.setOnClickListener {
-            val intent = Intent(this, NavComponentActivity::class.java)
-            startActivity(intent)
-        }
+            binding.btnNavComp.setOnClickListener {
+                val intent = Intent(this, NavComponentActivity::class.java)
+                startActivity(intent)
+            }
 
-        binding.btnNavDrawer.setOnClickListener {
-            val intent = Intent(this, NavDrawerActivity::class.java)
-            startActivity(intent)
-        }
+            binding.btnNavDrawer.setOnClickListener {
+                val intent = Intent(this, NavDrawerActivity::class.java)
+                startActivity(intent)
+            }
 
-        binding.btnNavBar.setOnClickListener {
-            val intent = Intent(this, BottomNavActivity::class.java)
-            startActivity(intent)
-        }
+            binding.btnNavBar.setOnClickListener {
+                val intent = Intent(this, BottomNavActivity::class.java)
+                startActivity(intent)
+            }
 
-        binding.btnViewPager.setOnClickListener {
-            val intent = Intent(this, ViewPagerActivity::class.java)
-            startActivity(intent)
-        }
+            binding.btnViewPager.setOnClickListener {
+                val intent = Intent(this, ViewPagerActivity::class.java)
+                startActivity(intent)
+            }
 
-        binding.button3.setOnClickListener {
+            binding.button3.setOnClickListener {
 
 
 
@@ -159,6 +172,9 @@ class BindingActivity : AppCompatActivity() {
 //            intent.putExtra("dataMahasiswa",mahasiswa)
 //
 //            startActivity(intent)
+            }
+        }else if(BuildConfig.FLAVOR == "demo"){
+            Toast.makeText(this, "anda masih demo", Toast.LENGTH_SHORT).show()
         }
 
 
