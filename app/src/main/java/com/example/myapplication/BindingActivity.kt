@@ -25,7 +25,9 @@ class BindingActivity : AppCompatActivity() {
         //this is from master again
         //this is from conflict-branch edited
         //this is from master again again
+        //this is from conflict
         //this is from master again again again
+        //this is from conflict
 
         if (BuildConfig.FLAVOR == "full"){
             binding.btnDi.setOnClickListener {
