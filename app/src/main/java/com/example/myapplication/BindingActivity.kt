@@ -31,6 +31,7 @@ class BindingActivity : AppCompatActivity() {
 
 
         //feature from firman
+        //feature register from firman
 
         if (BuildConfig.FLAVOR == "full"){
             binding.btnDi.setOnClickListener {
