@@ -18,6 +18,7 @@ class BindingActivity : AppCompatActivity() {
         binding = ActivityBindingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //this is testing-branch commit
 
         if (BuildConfig.FLAVOR == "full"){
             binding.btnDi.setOnClickListener {
