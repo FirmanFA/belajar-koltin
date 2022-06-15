@@ -29,6 +29,9 @@ class BindingActivity : AppCompatActivity() {
         //this is from master again again again
         //this is from conflict
 
+
+        //feature from firman
+
         if (BuildConfig.FLAVOR == "full"){
             binding.btnDi.setOnClickListener {
                 val intent = Intent(this, InjectionActivity::class.java)
