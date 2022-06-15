@@ -23,6 +23,13 @@ class BindingActivity : AppCompatActivity() {
         //this is commited from conflict-branch
         //this is commit from master
         //this is from master again
+        //this is from conflict-branch edited
+        //this is from master again again
+        //this is from conflict
+
+
+        //feature from firman
+        //feature register from master
 
         if (BuildConfig.FLAVOR == "full"){
             binding.btnDi.setOnClickListener {
