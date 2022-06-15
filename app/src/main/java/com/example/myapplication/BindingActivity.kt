@@ -23,7 +23,7 @@ class BindingActivity : AppCompatActivity() {
         //this is commited from conflict-branch
         //this is commit from master
         //this is from master again
-        //this is from conflict-branch
+        //this is from conflict-branch notedited
 
         if (BuildConfig.FLAVOR == "full"){
             binding.btnDi.setOnClickListener {
