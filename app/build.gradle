@@ -10,7 +10,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.myapplication"
+        applicationId "com.firman.belajarkotlin"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -92,9 +92,21 @@ dependencies {
 // Navigation Graph
     implementation "io.insert-koin:koin-androidx-navigation:$koin_version"
 
+    //chucker
+    debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+
+    //    // Optional -- Mockito framework
+    testImplementation "org.mockito:mockito-core:4.5.1"
+//    // Optional -- mockito-kotlin
+    testImplementation "org.mockito.kotlin:mockito-kotlin:4.0.0"
+//    // Optional -- Mockk framework
+    testImplementation "io.mockk:mockk:1.12.4"
+
 
 
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'

@@ -6,16 +6,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.example.myapplication.databinding.ActivityBindingBinding
-import com.example.myapplication.di.NetworkModule
-import com.example.myapplication.di.RepositoryModule
-import com.example.myapplication.di.ViewModelModule
 import com.example.myapplication.fragment.CustomDialogFragment
 import com.example.myapplication.ui.injection.InjectionActivity
 import org.json.JSONArray
 import org.json.JSONObject
-import org.koin.android.ext.koin.androidContext
-import org.koin.android.ext.koin.androidLogger
-import org.koin.core.context.startKoin
 
 class BindingActivity : AppCompatActivity() {
     lateinit var binding: ActivityBindingBinding

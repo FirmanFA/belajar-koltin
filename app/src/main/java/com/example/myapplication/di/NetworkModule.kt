@@ -1,8 +1,9 @@
 package com.example.myapplication.di
 
+import com.chuckerteam.chucker.api.ChuckerCollector
+import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.example.myapplication.data.ApiHelper
 import com.example.myapplication.data.ApiService
-import com.example.myapplication.database.UserDao
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.module.dsl.singleOf
@@ -18,6 +19,7 @@ val NetworkModule = module {
         }
     }
     single {
+
         OkHttpClient.Builder()
             .addInterceptor(get<HttpLoggingInterceptor>())
             .addInterceptor {
@@ -27,6 +29,14 @@ val NetworkModule = module {
                     .addQueryParameter("api_key","5374e8eba1107b24236cc30d17d5aa11").build()
                 it.proceed(request.newBuilder().url(queryBuild).build())
             }
+            .addInterceptor(
+                ChuckerInterceptor.Builder(get())
+                    .collector(ChuckerCollector(get()))
+                    .maxContentLength(250000L)
+                    .redactHeaders(emptySet())
+                    .alwaysReadResponseBody(false)
+                    .build()
+            )
             .build()
     }
     single {
