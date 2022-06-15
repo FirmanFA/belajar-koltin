@@ -21,6 +21,8 @@ class BindingActivity : AppCompatActivity() {
         //this is testing-branch commit
         //this is second-testing with protected master
         //this is commited from conflict-branch
+        //this is commit from master
+        //this is from master again
 
         if (BuildConfig.FLAVOR == "full"){
             binding.btnDi.setOnClickListener {
