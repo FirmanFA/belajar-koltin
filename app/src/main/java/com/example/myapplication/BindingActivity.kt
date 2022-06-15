@@ -19,6 +19,7 @@ class BindingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //this is testing-branch commit
+        //this is second-testing with protected master
 
         if (BuildConfig.FLAVOR == "full"){
             binding.btnDi.setOnClickListener {
