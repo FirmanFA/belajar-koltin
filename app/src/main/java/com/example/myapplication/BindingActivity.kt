@@ -20,6 +20,7 @@ class BindingActivity : AppCompatActivity() {
 
         //this is testing-branch commit
         //this is second-testing with protected master
+        //this is commited from conflict-branch
         //this is commit from master
 
         if (BuildConfig.FLAVOR == "full"){
